@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr 3fr;
+  background-color: #e4e4e4;
+  padding: 10px;
+}
+button {
+  cursor: pointer;
+}
+.input {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+#keluaran,
+#inputan,
+#format {
+  height: 70px;
+  text-align: end;
+  font-size: 21pt;
+  font-family: "Times New Roman", Times, serif;
+}
+#inputan {
+  padding: 10px;
+  text-align: start;
+  width: 100%;
+  margin-right: 20px;
+}
+#keluaran {
+  width: 100%;
+  font-size: 24pt;
+  padding: 15px;
+  height: 60px;
+}
+#format {
+  text-align: center;
+  font-size: 14pt;
+  height: 30px;
+  width: 30px;
+}
+.konversi {
+  display: grid;
+  grid-template-areas:
+    "biner oktal"
+    "desimal hexa";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  margin: 20px;
+}
+#biner,
+#oktal,
+#decimal,
+#hexa {
+  font-style: oblique;
+  background-color: #b3b3b3;
+  border-radius: 10px;
+  font-size: 16pt;
+  font-family: "Times New Roman", Times, serif;
+}
+#biner {
+  grid-area: biner;
+}
+#oktal {
+  grid-area: oktal;
+}
+#decimal {
+  grid-area: desimal;
+}
+#hexa {
+  grid-area: hexa;
+}
+
+@media screen and (min-width: 770px) {
+  .container {
+    width: 50%;
+  }
+}
